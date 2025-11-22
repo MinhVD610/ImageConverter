@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload và Convert WebP</title>
+  </head>
+  <body style="background-color: black; color: aqua; font-family: sans-serif">
+    <h1 id="successed">
+      <b><i>Login Successed!</i></b>
+    </h1>
+
+    <!-- Upload ảnh -->
+    <h2 style="margin-top: 20px">Webp to Png</h2>
+    <input type="file" id="fileInput" accept="image/*" multiple />
+    <div id="preview" style="margin-top: 20px"></div>
+
+    <!-- Upload video -->
+    <h2>Mov to Png</h2>
+    <input type="file" id="videoInput" accept="video/*" />
+    <canvas id="canvas" style="display: none"></canvas>
+
+    <h2>Upload MOV → Convert MP4</h2>
+
+    <input type="file" id="movInput" accept="video/quicktime" />
+    <button id="convertBtn">Convert to MP4</button>
+
+    <p id="status"></p>
+    <div id="downloadLink"></div>
+
+    <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.8/dist/ffmpeg.min.js"></script>
+
+    <script src="./convert.js"></script>
+  </body>
+</html>
